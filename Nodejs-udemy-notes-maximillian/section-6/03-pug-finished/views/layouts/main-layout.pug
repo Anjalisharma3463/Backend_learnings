@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{pageTitle}
+        link(rel="stylesheet", href="/css/main.css")
+        block styles
+    body   
+        header.main-header
+            nav.main-header__nav
+                ul.main-header__item-list
+                    li.main-header__item
+                        a(href="/", class=(path === '/' ? 'active' : '')) Shop
+                    li.main-header__item
+                        a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
+        block content
+
+//-          we get a base layout which looks like this
+
+//- but in other views that should extend this layout,
+
+//- they might use this layout and add more links in this place.
+
+//- We can define such a hook or placeholders by adding the 
+//- block keyword which pug understands and then defining any name
+
+//- of our choice, styles for example.
+
+//- Now we will be able to add more styles from inside other files here
+
+//- and I will show you how to add this in a second.
+
+//- I also want to remove that active link here,
+
+//- by the way also in the 404.pug file because I have no assumption about what's active and I will show you how
+
+//- to dynamically set this in a second too.
+
+//- Now the content below the header also is dynamic
+
+//- and here I again will reserve a block,
+
+//- so a hook which I'll name content and the name again is up to you.
+
+
+
+//- so a hook which I'll name content and the name again is up to you.
+
+//- So now we get this basic layout with two hooks we can dynamically enter content into from inside our
+
+//- other files.
